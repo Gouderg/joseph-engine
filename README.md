@@ -2,8 +2,4 @@
 
 ## Phase 1
 
-### Vector3D
-
-    
-
-### Particule
+Penser à checker si la position ne devient pas nul en y (on touche le sol)

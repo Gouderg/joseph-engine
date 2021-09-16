@@ -6,12 +6,12 @@ PVector::PVector(double x = 0, double y = 0, double z = 0) {
     this->y = y;
     this->z = z;
 
-    std::cout << "Appel du constructeur de PVector" << std::endl;
+    // std::cout << "Appel du constructeur de PVector" << std::endl;
 }
 
 // Desctructor.
 PVector::~PVector() {
-    std::cout << "Appel du desctructeur de PVector" << std::endl;
+    // std::cout << "Appel du desctructeur de PVector" << std::endl;
 }
 
 // Norme.
@@ -69,6 +69,15 @@ void PVector::mul(double n) {
     this->y *= n;
     this->z *= n;
 }
+
+PVector PVector::mul(PVector v, double n) {
+    return PVector(
+        v.x * n,
+        v.y * n,
+        v.z * n
+    );
+}
+
 
 // Div.
 void PVector::div(PVector v) {

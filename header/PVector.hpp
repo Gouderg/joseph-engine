@@ -8,6 +8,7 @@ class PVector {
     public:
         
         // Constructor.
+        PVector(){}
         PVector(double x, double y, double z);
 
         // Destructor.
@@ -43,6 +44,7 @@ class PVector {
         // Mul.
         void mul(PVector v);
         void mul(double n);
+        static PVector mul(PVector v, double n);
 
         // Div.
         void div(PVector v);

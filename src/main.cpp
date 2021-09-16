@@ -1,14 +1,14 @@
-#include "../header/PVector.hpp"
-
-#include <iostream>
+#include "../header/Particule.hpp"
 
 int main(int argc, char const *argv[])
 {
-    PVector u = PVector(2, -3, -1);
-    PVector v = PVector(1, 4, -2);
-    PVector result = PVector::produitVectoriel(u,v);
-    
-    std::cout << "x:" << result.getX() << ", y: " << result.getY() << ", z: " << result.getZ() << std::endl;
+
+    Particule p = Particule(10, PVector(0,0,0));
+    for (int i = 0; i < 10; i++) {
+        // Update de la particule
+        p.updateFrame();
+        p.showPosition();
+    }
 
     return 0;
 }
