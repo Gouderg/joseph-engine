@@ -24,16 +24,9 @@ void Particule::updateFrame() {
 
     // Calcul des forces s'exerçant sur la particule.
     PVector acceleration = PVector(0,0,0);
-    acceleration.add(PVector(0,-GRAVITY,0));  // On ajoute la gravité.
+    acceleration.add(PVector(0,-GRAVITY,0));  // On ajoute la gravité. Ici pas d'autre force sinon (1/m) * F et F = mg ici
 
     // Update de la position.
-    // PVector position = this->position;
-    // position.add(PVector::mul(this->vitesse, t));
-    // position.add(PVector::mul(acceleration, pow(t,2)/2));
-    // this->position = position;
-    // this->position.add(this->vitesse);
-
-    
     this->position.add(PVector::mul(this->vitesse, t));
     this->position.add(PVector::mul(acceleration, pow(t,2)/2));
 

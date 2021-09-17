@@ -24,13 +24,11 @@ class Particule {
         double getMasse() const {return this->masse;}
         PVector getPosition() const {return this->position;}
         PVector getVitesse() const {return this->vitesse;}
-        // PVector getAcceleration() const {return this->acceleration;} 
 
         // Setter.
         void setMasse(const double masse) {this->masse = masse;}
         void setPosition(const PVector position) {this->position = position;}
         void setVitesse(const PVector vitesse) {this->vitesse = vitesse;}
-        // void setAcceleration(const PVector acceleration) {this->acceleration = acceleration;}
 
         // Update.
         void updateFrame();
@@ -40,6 +38,5 @@ class Particule {
         double masse;           
         PVector position;
         PVector vitesse;
-        // PVector acceleration;
 
 };
