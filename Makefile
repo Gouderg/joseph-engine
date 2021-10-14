@@ -1,19 +1,20 @@
-moteur: main.o PVector.o Particule.o
-	g++ $^ -o $@
+CC = g++
+CFLAGS = #-W -Wall -g
+LDFLAGS = -lsfml-graphics -lsfml-window -lsfml-system -lGL -lX11 -lpthread -lXrandr -lXi -ldl
 
-main.o: src/main.cpp header/PVector.hpp
-	g++ -Wall -std=c++11 -c $<
+SRC = $(wildcard src/*.cpp)
+OBJS = $(SRC:.cpp=.o)
+ 
+all : moteur clean
 
-PVector.o: src/PVector.cpp header/PVector.hpp
-	g++ -Wall -std=c++11 -c $<
+moteur : $(OBJS)
+	$(CC) -o $@ $^ $(LDFLAGS)
 
-Particule.o: src/Particule.cpp header/Particule.hpp
-	g++ -Wall -std=c++11 -c $<
+%.o : %.cpp
+	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
-	rm *.o
+	rm src/*.o
 
-cleaner:
-	rm *.o moteur
-
-all : moteur clean
+git:
+	rm moteur

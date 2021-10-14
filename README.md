@@ -1,11 +1,21 @@
 # Moteur de jeu
 
+## Install librairy on Ubuntu 20.04
+
+```bash
+    sudo apt update
+    sudo apt install freeglut3
+    sudo apt install 
+```
+
 ## How to compile
 
 ```bash
     >$ make all
     >$ ./moteur
 ```
+
+
 
 ## Phase 1
 
@@ -33,3 +43,11 @@ Ajouter un mode lent (une constante qui ralentit la vitesse réel de la balle ma
 Pas de déplacement, juste un curseur qui se déplace sur l'écran.
 La balle part en fonction de l'orientation
 
+## tuto
+http://sdz.tdct.org/sdz/developpez-vos-applications-3d-avec-opengl-3-3.html#Dveloppezvosapplications3DavecOpenGL3.3
+
+https://opengl.developpez.com/tutoriels/apprendre-opengl/?page=creer-une-fenetre
+
+https://www.khronos.org/registry/OpenGL/api/GLES3/
+
+https://www.youtube.com/watch?v=8Pb7m-RdAPw

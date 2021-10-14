@@ -1,14 +1,17 @@
 #include "../header/Particule.hpp"
+#include "../header/MainWindow.hpp"
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
 
-    Particule p = Particule(10, PVector(0,0,0));
-    for (int i = 0; i < 10; i++) {
-        // Update de la particule
-        p.updateFrame();
-        p.showPosition();
+    MainWindow app;
+
+    if (!app.initWindow()) {
+        std::cout << "Erreur initialisation de la fenêtre" << std::endl;
+        return EXIT_FAILURE;
     }
 
-    return 0;
+    app.mainLoop();
+    
+
+    return EXIT_SUCCESS;
 }

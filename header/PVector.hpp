@@ -29,7 +29,7 @@ class PVector {
         double norme();
         static double norme(PVector v);
 
-        // Normalisation
+        // Normalisation.
         PVector normalisation();
         static PVector normalisation(PVector v);
         
